@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LinguaX AI - Smart Language Translator</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
+    </div>
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-language"></i>
+
+            <h2>LinguaX AI</h2>
+
+        </div>
+
+        <button id="themeBtn">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+    </header>
+
+    <section class="hero">
+
+        <h1>Translate Any Language Instantly</h1>
+
+        <p>
+
+            AI Powered Language Translator
+
+        </p>
+
+    </section>
+
+    <main class="container">
+
+        <div class="translator-card">
+
+            <div class="language-row">
+
+                <select id="fromLanguage"></select>
+
+                <button id="swapBtn">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+                <select id="toLanguage"></select>
+
+            </div>
+
+            <div class="text-area">
+
+                <textarea
+                    id="inputText"
+                    placeholder="Type your text here..."></textarea>
+
+            </div>
+
+            <div class="action-buttons">
+
+                <button id="voiceBtn">
+
+                    <i class="fa-solid fa-microphone"></i>
+
+                    Voice
+
+                </button>
+
+                <button id="translateBtn">
+
+                    <i class="fa-solid fa-language"></i>
+
+                    Translate
+
+                </button>
+
+                <button id="clearBtn">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Clear
+
+                </button>
+
+            </div>
+
+            <div class="output-box">
+
+                <textarea
+                    id="outputText"
+                    readonly
+                    placeholder="Translated text will appear here..."></textarea>
+
+                <div class="output-buttons">
+
+                    <button id="copyBtn">
+
+                        <i class="fa-regular fa-copy"></i>
+
+                        Copy
+
+                    </button>
+
+                    <button id="speakBtn">
+
+                        <i class="fa-solid fa-volume-high"></i>
+
+                        Speak
+
+                    </button>
+
+                    <button id="downloadBtn">
+
+                        <i class="fa-solid fa-download"></i>
+
+                        Download
+
+                    </button>
+
+                </div>
+
+            </div>
+                        <!-- Extra Features -->
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    <h3>History</h3>
+
+                    <div id="historyList">
+
+                        <p>No history yet.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-chart-simple"></i>
+
+                    <h3>Statistics</h3>
+
+                    <div class="stats">
+
+                        <div class="stat-box">
+
+                            <span id="charCount">0</span>
+
+                            <p>Characters</p>
+
+                        </div>
+
+                        <div class="stat-box">
+
+                            <span id="wordCount">0</span>
+
+                            <p>Words</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="bottom-tools">
+
+                <button id="pasteBtn">
+
+                    <i class="fa-solid fa-paste"></i>
+
+                    Paste
+
+                </button>
+
+                <button id="saveHistory">
+
+                    <i class="fa-solid fa-bookmark"></i>
+
+                    Save
+
+                </button>
+
+                <button id="clearHistory">
+
+                    <i class="fa-solid fa-trash-can"></i>
+
+                    Clear History
+
+                </button>
+
+            </div>
+
+            <div class="loading" id="loading">
+
+                <div class="spinner"></div>
+
+                <h3>Translating...</h3>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <section class="about">
+
+        <h2>Why LinguaX AI?</h2>
+
+        <div class="about-grid">
+
+            <div class="about-card">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <h3>Fast</h3>
+
+                <p>Translate within seconds using online API.</p>
+
+            </div>
+
+            <div class="about-card">
+
+                <i class="fa-solid fa-earth-asia"></i>
+
+                <h3>130+ Languages</h3>
+
+                <p>Supports major international languages.</p>
+
+            </div>
+
+            <div class="about-card">
+
+                <i class="fa-solid fa-microphone-lines"></i>
+
+                <h3>Voice Input</h3>
+
+                <p>Speak instead of typing.</p>
+
+            </div>
+
+            <div class="about-card">
+
+                <i class="fa-solid fa-volume-high"></i>
+
+                <h3>Text To Speech</h3>
+
+                <p>Listen to translated output instantly.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+        <section class="features-section">
+
+        <h2>Powerful Features</h2>
+
+        <div class="features-grid">
+
+            <div class="feature">
+
+                <i class="fa-solid fa-copy"></i>
+
+                <h3>One Click Copy</h3>
+
+                <p>Copy translated text instantly.</p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-download"></i>
+
+                <h3>Download</h3>
+
+                <p>Save translation as a text file.</p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-moon"></i>
+
+                <h3>Dark Mode</h3>
+
+                <p>Modern eye-friendly interface.</p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-mobile-screen-button"></i>
+
+                <h3>Responsive</h3>
+
+                <p>Works on desktop, tablet and mobile.</p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h3>Recent History</h3>
+
+                <p>Access your latest translations quickly.</p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h3>Secure</h3>
+
+                <p>Your translations stay inside your browser.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <h2>LinguaX AI</h2>
+
+        <p>
+            © 2026 | Developed by Shreyansh Bhadada
+        </p>
+
+        <div class="socials">
+
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
