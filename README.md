@@ -23,6 +23,9 @@ An advanced Language Translation Tool developed using **HTML, CSS and JavaScript
 
 ## 📸 Screenshots
 
+## live demo
+https://linguax-ai.onrender.com
+
 (Add project screenshots here)
 
 ## 👨‍💻 Developer
